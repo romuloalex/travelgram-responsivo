@@ -1,0 +1,56 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    line-height: 0;
+    padding-block: 8px;
+}
+
+nav ul li:last-child img{
+    width: 40px;
+    height:40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Estilos para Desktop (itens lado a lado) */
+#secondary-menu {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0;       /* Remove o padding padrão */
+  display: flex;      /* Alinha os itens lado a lado */
+  justify-self: flex-start; /* Centraliza o menu na página, por exemplo */
+  gap: 24px;        /* Espaço entre os itens */
+}
+
+/* --- VERSÃO PARA MOBILE --- */
+/* Aplica estes estilos quando a largura da tela for 768px ou menor */
+@media (max-width: 768px) {
+  #secondary-menu {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 16px; /* Opcional: ajusta o espaçamento para a visualização mobile */
+  }
+}
+
+/* Ajustes adicionais para telas pequenas (até 480px) */
+@media (max-width: 480px) {
+  nav{
+      padding-block: 8px;
+  }
+
+  nav ul{
+      gap: 16px;
+  }
+
+  nav ul li:last-child img{
+      width: 32px;
+      height: 32px;
+  }
+}

@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-block: 24px;
+}
+
+main img{
+    width: 286px;
+    height: 286px;
+    object-fit: cover;
+}
+
+/* Galeria responsiva: 1 coluna no mobile, 4+ no desktop */
+@media (max-width: 480px) {
+  main{
+      gap: 12px;
+      padding-block: 16px;
+  }
+
+  main img{
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+  }
+}

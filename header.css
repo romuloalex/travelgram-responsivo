@@ -1,0 +1,185 @@
+header{
+    padding-block: 32px;
+    font: var(--text-md);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 2rem;              
+}
+
+
+@media (min-width: 48em) {
+  header .container {
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 3rem;
+  }
+}
+
+#profile {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  text-align: center;     
+  gap: 1.5rem; 
+}
+
+@media (min-width: 48em) {
+  #profile {
+    flex-direction: row; 
+    text-align: left;    
+    gap: 2rem;
+  }
+}
+
+#profile>div{
+    max-width: 348px;
+}
+
+
+#profile {
+  display: flex;
+  align-items: center; 
+  gap: 24px;           
+}
+
+@media (max-width: 768px) {
+  
+  #profile {
+    flex-direction: column;  
+    align-items: flex-start;  
+    gap: 16px;                
+  }
+
+  #profile div {
+    text-align: left;
+  }
+
+}
+
+#profile img{
+    width: 176px;
+    height:176px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Mobile até 480px: avatar menor e espaçamentos ajustados */
+@media (max-width: 480px) {
+  header{
+    padding-block: 24px;
+  }
+
+  header .container{
+    align-items: flex-start;
+  }
+
+  #profile{
+    gap: 16px;
+  }
+
+  #profile img{
+    width: 120px;
+    height: 120px;
+  }
+
+  #profile h1{
+    font-size: 24px;
+  }
+
+  #secondary-menu{
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  #secondary-menu img{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+#profile h1 {
+  font-family: 'Poppins', sans-serif; /* Define a fonte Poppins como principal */
+  font-size: 32px;                   /* Tamanho da fonte para desktop */
+  font-weight: 700;                  /* Aplica o estilo "bold" (negrito) */
+  color: var(--text-color-primary);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  #profile h1 {
+    font-size: 24px; /* Sobrescreve o tamanho da fonte para mobile */
+  }
+}
+
+#info{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 280px;
+}
+
+#info li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilos gerais para o menu (opcional, mas recomendado) */
+#primary-menu {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 24px; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+@media (max-width: 768px) {
+    #primary-menu li:nth-child(2),
+    #primary-menu li:nth-child(3) {
+        display:none;
+    }
+}
+
+/* Itens à direita do header (local, países, fotos) */
+#secondary-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+#secondary-menu li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-color-secondary);
+}
+
+#secondary-menu img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: none;
+}
+
+/* pinta os ícones na cor da marca quando for SVG monocromático */
+#secondary-menu img[src$='.svg'] {
+  filter: invert(53%) sepia(42%) saturate(2645%) hue-rotate(331deg) brightness(99%) contrast(95%);
+}
+
+#secondary-menu span {
+  font: var(--text-md);
+  color: var(--text-color-secondary);
+}
+
+@media (min-width: 48em) {
+  #secondary-menu {
+    align-items: flex-start;
+  }
+}
